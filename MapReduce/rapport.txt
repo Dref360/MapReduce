@@ -1,0 +1,12 @@
+Frédéric Branchaud-Charron 13 046 651
+Bruno Cadorette 13 056 051
+
+Dans ce dernier travail de nachos, nous avions à implémenter la demande de page
+pure. Pour ce faire, nous avons donc créer un swapFile qui est une copie de l'executable.
+Lorsqu'il y a demande de page, nous trouvons la page grâce à l'addresse de la faute.
+Ensuite, on trouve un cadre et on assigne le cadre à la table de page du processus.
+Finalement, on copie la partie de l'executable en mémoire à partir du swapFile.
+
+Lorsqu'il n'y a plus de cadre, on choisit une victime. Ici, c'est le premier arriver
+qui est la victime. On trouve son processus grâce à un tableau de backPointers et on
+met la page invalide. Ensuite, on assigne le cadre à la page qui a créer la faute de page.
